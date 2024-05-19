@@ -7,7 +7,7 @@ const createInventory = async (req, res) => {
   const { name, vendor, price, quantity } = data;
 
   // Corrected regular expressions for validation
-  const alphabeticRegex = /^[A-Za-z]+$/;
+  const alphabeticRegex = /^[A-Za-z ]+$/;
   const numericRegex = /^[0-9]*\.?[0-9]+$/;
 
   if (!name) {
@@ -71,7 +71,7 @@ const updateInventory = async (req, res) => {
   console.log("id:",id)
   const data = req.body;
   const { name, vendor, price, quantity } = data;
-  const alphabeticRegex = /^[A-Za-z]+$/;
+  const alphabeticRegex = /^[A-Za-z ]+$/;
   const numericRegex = /^[0-9]*\.?[0-9]+$/;
 
   if (!alphabeticRegex.test(name)) {
